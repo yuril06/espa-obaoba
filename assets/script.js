@@ -1,7 +1,7 @@
 // Espaço Baobá — WhatsApp links, class finder, visit form, photo strip, menu and motion.
 
 // Número do WhatsApp da escola: só dígitos, com 55 + DDD.
-const WHATSAPP = '551125643654';
+const WHATSAPP = '5511916000518';
 
 const waLink = (text) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
 
