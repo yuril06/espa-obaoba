@@ -1,0 +1,7 @@
+# Netlify: gera o site com Eleventy e publica a pasta _site
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "22"

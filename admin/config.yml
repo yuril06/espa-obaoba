@@ -1,12 +1,13 @@
 # Painel do blog do Espaço Baobá (Decap CMS)
 #
 # No computador (demonstração): rode "npm run cms" e "npm start" e abra http://localhost:8080/admin/
-# No ar: o login da escola é configurado no "backend" abaixo (veja o LEIA-ME.md).
+# No ar (Netlify): a escola entra com a conta do GitHub. Passo a passo no LEIA-ME.md.
 
 local_backend: true
 
 backend:
-  name: git-gateway
+  name: github
+  repo: yuril06/espa-obaoba
   branch: main
   commit_messages:
     create: "Blog: novo artigo “{{slug}}”"

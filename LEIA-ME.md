@@ -27,17 +27,25 @@ Todo artigo ganha automaticamente um botão de WhatsApp com a mensagem
 "Olá! Li o artigo “(título)” no site do Baobá e tenho uma dúvida."
 Artigos do tema **Saúde** ganham o aviso "não substitui a avaliação do pediatra".
 
-## Colocar no ar com o login da escola
+## Colocar no ar (Netlify + login com GitHub)
 
-O site é gerado com `npm run build` (pasta `_site`). Para a diretora entrar no painel
-pela internet, é preciso escolher como ela faz login e trocar o bloco `backend`
-em `admin/config.yml`:
+O repositório já tem o `netlify.toml` (gera com `npm run build` e publica `_site`)
+e o painel já aponta para `yuril06/espa-obaoba`.
 
-- **Netlify (e-mail e senha):** publicar o repositório no Netlify, ativar Identity e
-  Git Gateway, e convidar o e-mail da escola. Ela entra em `seusite/admin/` com e-mail e senha.
-  Conferir antes se o Netlify Identity continua disponível para sites novos.
-- **Login com GitHub (qualquer hospedagem):** criar uma conta GitHub gratuita para a escola,
-  adicioná-la como colaboradora do repositório e usar `backend: name: github` com um
-  serviço de autenticação OAuth (ex.: Vercel ou Cloudflare Worker).
+1. **Publicar no Netlify:** app.netlify.com → *Add new project* → *Import from Git* →
+   GitHub → escolha `espa-obaoba` → *Deploy*. Anote o endereço (ex.: `espaco-baoba.netlify.app`).
+2. **Criar o app de login no GitHub:** github.com → *Settings* → *Developer settings* →
+   *OAuth Apps* → *New OAuth App*:
+   - Homepage URL: o endereço do Netlify
+   - Authorization callback URL: `https://api.netlify.com/auth/done`
+   Gere um *Client secret* e copie o *Client ID* e o *Client secret*.
+3. **Ligar o login no Netlify:** no projeto → *Project configuration* → *Access & security* →
+   *OAuth* → *Install provider* → GitHub → cole o Client ID e o Client secret.
+4. **Dar acesso à diretora:** ela cria uma conta gratuita em github.com; no repositório →
+   *Settings* → *Collaborators* → *Add people* → o usuário dela. Ela aceita o convite no e-mail.
+5. **Pronto:** ela entra em `https://(endereço)/admin/` → *Entrar com GitHub*.
 
-Cada artigo publicado vira um commit no repositório e o site é regerado sozinho em 1 a 2 minutos.
+Cada artigo publicado vira um commit no repositório e o Netlify publica o site de novo
+sozinho em 1 a 2 minutos.
+
+O Netlify Identity (login por e-mail e senha) foi descontinuado em 2025 e não deve ser usado.
