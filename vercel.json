@@ -2,6 +2,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": "_site",
   "rewrites": [
-    { "source": "/api/github/:path*", "destination": "/api/github?path=:path*" }
+    { "source": "/api/github/(.*)", "destination": "/api/github?path=$1" }
   ]
 }
