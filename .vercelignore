@@ -1,0 +1,6 @@
+.env*
+.taste-skill
+.playwright-cli
+node_modules
+_site
+token.txt
