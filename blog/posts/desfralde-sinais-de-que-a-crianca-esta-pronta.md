@@ -3,8 +3,10 @@ title: "Desfralde: sinais de que a criança está pronta"
 description: Não existe idade exata para tirar a fralda. Veja os sinais de prontidão e como fazer a transição sem pressão.
 category: Desenvolvimento
 date: 2026-10-06
-cover: /assets/img/tunel.jpg
-cover_alt: Bebê sorrindo sentado dentro de um túnel amarelo do escorregador
+cover: /assets/img/blog/desfralde-penico.jpg
+cover_alt: Penico infantil azul no chão
+credit: "Donald Trung Quoc Don, CC BY-SA 4.0, via Wikimedia Commons"
+credit_url: https://commons.wikimedia.org/wiki/File:Toddler_potty,_Oude_Pekela_(2020)_01.jpg
 whatsapp: ""
 ---
 O desfralde é uma conquista da criança, não uma tarefa a ser cumprida num prazo. A maioria das crianças fica pronta **entre 2 e 3 anos**, mas cada uma tem o seu tempo.

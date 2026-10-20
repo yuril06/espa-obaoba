@@ -27,6 +27,9 @@
       {%- if cover %}
       <figure class="post__cover">
         <img src="{{ cover }}" alt="{{ cover_alt or '' }}" width="1200" height="800" fetchpriority="high">
+        {%- if credit %}
+        <figcaption>Foto: {% if credit_url %}<a href="{{ credit_url }}" target="_blank" rel="noopener">{{ credit }}</a>{% else %}{{ credit }}{% endif %}</figcaption>
+        {%- endif %}
       </figure>
       {%- endif %}
 

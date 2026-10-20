@@ -3,8 +3,10 @@ title: Por que zero telas na primeira infância?
 description: Um dos nossos pilares explicado em poucas linhas, com ideias simples para trocar a tela por brincadeira em casa.
 category: Desenvolvimento
 date: 2026-09-28
-cover: /assets/img/telas.jpg
-cover_alt: Menina examinando uma pedra de perto com uma lupa
+cover: /assets/img/blog/zero-telas-blocos.jpg
+cover_alt: Mãos de uma criança brincando com blocos de madeira coloridos
+credit: "Andrew Alvarado / U.S. Air Force, domínio público, via Wikimedia Commons"
+credit_url: https://commons.wikimedia.org/wiki/File:Follow_my_lead_(6623478).jpg
 whatsapp: ""
 ---
 No Baobá, um dos nossos quatro pilares é **zero telas**. A escolha é para que as crianças cresçam em presença, encontro e imaginação.

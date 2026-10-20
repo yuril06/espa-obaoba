@@ -3,8 +3,10 @@ title: "Febre: quando deixar meu filho em casa?"
 description: Como medir a temperatura, quais sinais pedem atenção e por que é melhor a criança ficar em casa até se recuperar.
 category: Saúde
 date: 2026-10-14
-cover: /assets/img/e-bercario.jpg
-cover_alt: Sala do berçário com tapete e brinquedos de madeira, iluminada pela luz do dia
+cover: /assets/img/blog/febre-termometro.jpg
+cover_alt: Adulto segurando um termômetro digital, com uma criança deitada ao fundo
+credit: "Shixart1985, CC BY 2.0, via Wikimedia Commons"
+credit_url: https://commons.wikimedia.org/wiki/File:Parent_checks_child%27s_temperature_with_thermometer_in_a_cozy_indoor_setting_during_winter.jpg
 whatsapp: ""
 ---
 Febre é uma das dúvidas mais frequentes das famílias, principalmente nos primeiros anos de escola, quando a criança entra em contato com muitos vírus novos.

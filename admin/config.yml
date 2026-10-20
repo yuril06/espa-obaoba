@@ -77,6 +77,15 @@ collections:
         widget: string
         required: false
         hint: "O que aparece na foto, em poucas palavras. Ajuda quem usa leitor de tela e o Google."
+      - label: Crédito da foto (opcional)
+        name: credit
+        widget: string
+        required: false
+        hint: "Para fotos tiradas da internet: autor e licença. Ex.: Fulano, CC BY 2.0, via Wikimedia Commons"
+      - label: Link da fonte da foto (opcional)
+        name: credit_url
+        widget: string
+        required: false
       - label: Mensagem do WhatsApp (opcional)
         name: whatsapp
         widget: string

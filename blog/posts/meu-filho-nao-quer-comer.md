@@ -3,8 +3,10 @@ title: Meu filho não quer comer. O que fazer?
 description: A recusa alimentar é comum na primeira infância. Dicas práticas para a hora da refeição ficar mais leve, para a criança e para você.
 category: Alimentação
 date: 2026-10-02
-cover: /assets/img/almoco.jpg
-cover_alt: Menina almoçando arroz com legumes na escola
+cover: /assets/img/blog/alimentacao-refeicao.jpg
+cover_alt: Crianças pequenas sentadas à mesa com uma educadora na hora da refeição
+credit: "USDA, domínio público, via Wikimedia Commons"
+credit_url: https://commons.wikimedia.org/wiki/File:Family_Style_Meal_Service_With_Children_in_the_CACFP_(20221214-USDA-FNS-UNK-027).jpg
 whatsapp: ""
 ---
 É muito comum que, por volta dos 2 anos, a criança passe a comer menos ou a recusar alimentos que antes aceitava. O ritmo de crescimento desacelera e a vontade de escolher aparece.
