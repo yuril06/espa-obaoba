@@ -1,11 +1,12 @@
 ---
-title: "Adaptação escolar: como ajudar nos primeiros dias"
-description: O choro na porta, a saudade, a culpa. O que esperar da adaptação e o que a família pode fazer para ela ser mais tranquila.
+title: "Adaptação escolar: como ajudar nos primeiros d"
+description: O choro na porta, a saudade, a culpa. O que esperar da adaptação e
+  o que a família pode fazer para ela ser mais tranquila.
 category: Rotina e adaptação
 date: 2026-10-10
 cover: /assets/img/blog/adaptacao-acolhimento.jpg
 cover_alt: Adulta agachada conversando com duas crianças pequenas num gramado
-credit: "BLM Alaska, domínio público, via Wikimedia Commons"
+credit: BLM Alaska, domínio público, via Wikimedia Commons
 credit_url: https://commons.wikimedia.org/wiki/File:Mom_and_toddlers_2_(53500768183).jpg
 whatsapp: ""
 ---
