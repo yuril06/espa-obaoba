@@ -1,4 +1,7 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "_site"
+  "outputDirectory": "_site",
+  "rewrites": [
+    { "source": "/api/github/:path*", "destination": "/api/github?path=:path*" }
+  ]
 }

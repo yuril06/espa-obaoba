@@ -13,6 +13,12 @@
   <script>
     CMS.registerPreviewStyle('/assets/styles.css');
     CMS.registerPreviewStyle('/assets/blog.css');
+    // The school logs in with a password, not with GitHub: say just "Entrar".
+    new MutationObserver(() => {
+      document.querySelectorAll('button').forEach((b) => {
+        if (/GitHub/i.test(b.textContent)) b.textContent = 'Entrar no painel';
+      });
+    }).observe(document.body, { childList: true, subtree: true });
   </script>
 </body>
 </html>
