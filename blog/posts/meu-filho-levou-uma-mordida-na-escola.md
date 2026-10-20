@@ -3,10 +3,8 @@ title: Meu filho levou uma mordida na escola. E agora?
 description: Morder é comum entre 1 e 3 anos. Entenda por que acontece, o que fazer com a marca e como a escola acompanha as duas crianças.
 category: Saúde
 date: 2026-10-18
-cover: /assets/img/blog/mordida-bebe-mordedor.jpg
-cover_alt: Bebê mordendo um brinquedo de borracha em forma de girafa
-credit: "Aaron Fulkerson, CC BY-SA 2.0, via Wikimedia Commons"
-credit_url: https://commons.wikimedia.org/wiki/File:Baby_playing_with_Sophie.jpg
+cover: /assets/img/tronquinho.jpg
+cover_alt: Duas crianças pequenas brincando juntas com cestos de palha
 whatsapp: ""
 ---
 Receber a notícia de que seu filho levou uma mordida aperta o coração. Mas vale saber: **morder é muito comum entre 1 e 3 anos** e quase sempre faz parte do desenvolvimento, não de maldade.
