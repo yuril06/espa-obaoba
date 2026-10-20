@@ -1,7 +1,8 @@
 # Painel do blog do Espaço Baobá (Decap CMS)
 #
 # No computador (demonstração): rode "npm run cms" e "npm start" e abra http://localhost:8080/admin/
-# No ar (Netlify): a escola entra com a conta do GitHub. Passo a passo no LEIA-ME.md.
+# No ar (Vercel): a escola entra com a conta do GitHub. Passo a passo no LEIA-ME.md.
+# Se o endereço do site mudar (domínio próprio), troque o base_url abaixo.
 
 local_backend: true
 
@@ -9,6 +10,8 @@ backend:
   name: github
   repo: yuril06/espa-obaoba
   branch: main
+  base_url: https://espaco-baoba.vercel.app
+  auth_endpoint: api/auth
   commit_messages:
     create: "Blog: novo artigo “{{slug}}”"
     update: "Blog: atualiza “{{slug}}”"
