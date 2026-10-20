@@ -159,3 +159,23 @@ if (reduce || !('IntersectionObserver' in window)) {
   }, { rootMargin: '0px 0px -6% 0px', threshold: 0 });
   targets.forEach((el) => io.observe(el));
 }
+
+// Blog: filter the articles by theme
+const chips = document.querySelectorAll('[data-filter]');
+if (chips.length) {
+  const cards = [...document.querySelectorAll('#cards .card')];
+  const empty = document.getElementById('blog-empty');
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const cat = chip.dataset.filter;
+      chips.forEach((c) => c.classList.toggle('is-on', c === chip));
+      let shown = 0;
+      cards.forEach((card) => {
+        const hit = !cat || card.dataset.cat === cat;
+        card.hidden = !hit;
+        if (hit) { shown++; card.classList.add('is-in'); }
+      });
+      if (empty) empty.hidden = shown > 0;
+    });
+  });
+}

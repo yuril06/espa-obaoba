@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ title }} · Espaço Baobá</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="theme-color" content="#1e6b4b">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+  <link rel="apple-touch-icon" href="/assets/favicon-180.png">
+  <meta property="og:type" content="{{ 'article' if cover else 'website' }}">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  {%- if cover %}<meta property="og:image" content="{{ cover }}">{% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/blog.css">
+  <script>document.documentElement.classList.add('js')</script>
+  {%- block head %}{% endblock %}
+</head>
+<body>
+{% include "defs.njk" %}
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+{% include "header.njk" %}
+  <main id="conteudo">
+    {%- block main %}{{ content | safe }}{% endblock %}
+  </main>
+{% include "footer.njk" %}
+{% include "wa-float.njk" %}
+  <script src="/assets/script.js" defer></script>
+</body>
+</html>

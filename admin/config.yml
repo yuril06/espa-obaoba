@@ -1,0 +1,91 @@
+# Painel do blog do Espaço Baobá (Decap CMS)
+#
+# No computador (demonstração): rode "npm run cms" e "npm start" e abra http://localhost:8080/admin/
+# No ar: o login da escola é configurado no "backend" abaixo (veja o LEIA-ME.md).
+
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: "Blog: novo artigo “{{slug}}”"
+    update: "Blog: atualiza “{{slug}}”"
+    delete: "Blog: remove “{{slug}}”"
+    uploadMedia: "Blog: envia imagem {{path}}"
+    deleteMedia: "Blog: remove imagem {{path}}"
+
+locale: pt
+
+# Endereços dos artigos sem acentos (ex.: /blog/meu-bebe-esta-com-colica/)
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+logo_url: /assets/img/logo.jpg
+
+media_folder: assets/img/blog
+public_folder: /assets/img/blog
+
+collections:
+  - name: posts
+    label: Artigos do blog
+    label_singular: Artigo
+    description: Dúvidas frequentes das famílias. Todo artigo ganha automaticamente um botão de WhatsApp para os pais falarem com a escola.
+    folder: blog/posts
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    editor:
+      preview: false
+    summary: "{{title}} · {{category}}"
+    sortable_fields: [date, title, category]
+    view_filters:
+      - { label: Saúde, field: category, pattern: "Saúde" }
+      - { label: Desenvolvimento, field: category, pattern: "Desenvolvimento" }
+      - { label: Alimentação, field: category, pattern: "Alimentação" }
+      - { label: Rotina e adaptação, field: category, pattern: "Rotina e adaptação" }
+    fields:
+      - label: Título
+        name: title
+        widget: string
+        hint: "Escreva como os pais perguntam. Ex.: Meu filho levou uma mordida na escola. E agora?"
+      - label: Resumo
+        name: description
+        widget: text
+        hint: "Uma ou duas frases. Aparece na lista do blog e no Google."
+      - label: Tema
+        name: category
+        widget: select
+        options: ["Saúde", "Desenvolvimento", "Alimentação", "Rotina e adaptação"]
+        default: "Saúde"
+      - label: Data de publicação
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+      - label: Foto de capa
+        name: cover
+        widget: image
+        required: false
+        hint: "Foto na horizontal fica melhor. Use só fotos de crianças com autorização dos responsáveis."
+      - label: Descrição da foto
+        name: cover_alt
+        widget: string
+        required: false
+        hint: "O que aparece na foto, em poucas palavras. Ajuda quem usa leitor de tela e o Google."
+      - label: Mensagem do WhatsApp (opcional)
+        name: whatsapp
+        widget: string
+        required: false
+        default: ""
+        hint: "Se deixar vazio, a mensagem será: Olá! Li o artigo “(título)” no site do Baobá e tenho uma dúvida."
+      - label: Texto do artigo
+        name: body
+        widget: markdown
+        buttons: [bold, italic, link, heading-two, heading-three, bulleted-list, numbered-list, quote]
+        editor_components: [image]
+        hint: "Use subtítulos e listas para facilitar a leitura no celular."

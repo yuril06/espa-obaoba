@@ -6,8 +6,8 @@
   <title>Espaço Baobá · Berçário e Educação Infantil em Santo André</title>
   <meta name="description" content="Escola de educação infantil com identidade brasileira na Vila Assunção, Santo André. De 4 meses a 6 anos, das 6h30 às 18h30. Alimentação de chef, zero telas, natureza e brincar, sem apostilas. Matrículas abertas.">
   <meta name="theme-color" content="#1e6b4b">
-  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
-  <link rel="apple-touch-icon" href="assets/favicon-180.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+  <link rel="apple-touch-icon" href="/assets/favicon-180.png">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Espaço Baobá · Educação infantil com afeto, arte e natureza">
@@ -16,9 +16,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/img/hero-fachada.jpg" media="(min-width: 761px)">
-  <link rel="preload" as="image" href="assets/img/hero-fachada-m.jpg" media="(max-width: 760px)">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="preload" as="image" href="/assets/img/hero-fachada.jpg" media="(min-width: 761px)">
+  <link rel="preload" as="image" href="/assets/img/hero-fachada-m.jpg" media="(max-width: 760px)">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/blog.css">
   <script>document.documentElement.classList.add('js')</script>
   <script type="application/ld+json">
   {
@@ -48,54 +49,19 @@
   </script>
 </head>
 <body>
-  <!-- The painted vine from the school's wall, drawn once and reused -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-    <defs>
-      <path id="leaf" d="M0 0C9-13 31-16 46-6C34 6 13 9 0 0Z"/>
-      <symbol id="vine" viewBox="0 0 220 440">
-        <path class="vine__stem" d="M108 440C96 360 132 300 112 230C92 160 124 110 112 40C110 24 113 10 118 0" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
-        <g class="vine__leaves" fill="currentColor">
-          <use href="#leaf" transform="translate(104 392) rotate(-150)"/>
-          <use href="#leaf" transform="translate(110 362) rotate(-28)"/>
-          <use href="#leaf" transform="translate(120 312) rotate(-158)"/>
-          <use href="#leaf" transform="translate(124 280) rotate(-20)"/>
-          <use href="#leaf" transform="translate(110 238) rotate(-148)"/>
-          <use href="#leaf" transform="translate(104 198) rotate(-32)"/>
-          <use href="#leaf" transform="translate(108 156) rotate(-160)"/>
-          <use href="#leaf" transform="translate(116 124) rotate(-24)"/>
-          <use href="#leaf" transform="translate(113 84) rotate(-152)"/>
-          <use href="#leaf" transform="translate(113 58) rotate(-36)"/>
-          <use href="#leaf" transform="translate(117 22) rotate(-84)"/>
-        </g>
-      </symbol>
-    </defs>
-  </svg>
+{% include "defs.njk" %}
 
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="bar" id="topo">
-    <a class="bar__brand" href="#topo" aria-label="Espaço Baobá, início">
-      <img src="assets/img/logo.jpg" alt="Espaço Baobá" width="600" height="600">
-    </a>
-    <nav class="bar__nav" id="menu" aria-label="Seções">
-      <a href="#espacos">Espaços</a>
-      <a href="#proposta">Proposta</a>
-      <a href="#turmas">Turmas</a>
-      <a href="#horarios">Horários</a>
-      <a href="#cozinha">Cozinha</a>
-      <a href="#visita">Contato</a>
-    </nav>
-    <a class="btn btn--small bar__cta" data-wa="Olá! Vi o site do Espaço Baobá e gostaria de agendar uma visita." href="https://wa.me/5511916000518" target="_blank" rel="noopener">Agendar visita</a>
-    <button class="bar__toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-  </header>
+{% include "header.njk" %}
 
   <main id="conteudo">
 
     <!-- Hero: the school's own façade -->
     <section class="hero" aria-labelledby="hero-titulo">
       <picture class="hero__photo">
-        <source media="(max-width: 760px)" srcset="assets/img/hero-fachada-m.jpg" width="720" height="756">
-        <img src="assets/img/hero-fachada.jpg" alt="Fachada do Espaço Baobá: toldo verde com a placa da escola e muro de pastilhas marrons com folhas pintadas" width="1440" height="907" fetchpriority="high">
+        <source media="(max-width: 760px)" srcset="/assets/img/hero-fachada-m.jpg" width="720" height="756">
+        <img src="/assets/img/hero-fachada.jpg" alt="Fachada do Espaço Baobá: toldo verde com a placa da escola e muro de pastilhas marrons com folhas pintadas" width="1440" height="907" fetchpriority="high">
       </picture>
       <div class="hero__content">
         <h1 id="hero-titulo" class="hero__title">Onde a infância cria raízes</h1>
@@ -131,7 +97,7 @@
       </div>
       <div class="manifesto__media">
         <figure class="manifesto__big" data-reveal>
-          <img src="assets/img/arvore-l.jpg" alt="Crianças subindo numa árvore grande com a ajuda da professora" width="1200" height="1600" loading="lazy">
+          <img src="/assets/img/arvore-l.jpg" alt="Crianças subindo numa árvore grande com a ajuda da professora" width="1200" height="1600" loading="lazy">
         </figure>
         <svg class="vine vine--manifesto" aria-hidden="true"><use href="#vine"/></svg>
       </div>
@@ -145,35 +111,35 @@
       </div>
       <ul class="bento" role="list">
         <li class="bento__item bento__item--bercario" data-reveal>
-          <img src="assets/img/e-bercario.jpg" alt="Sala do berçário com tapete, brinquedos de madeira e luz natural" width="744" height="960" loading="lazy">
+          <img src="/assets/img/e-bercario.jpg" alt="Sala do berçário com tapete, brinquedos de madeira e luz natural" width="744" height="960" loading="lazy">
           <p><strong>Berçário</strong>Luz natural, tapetes e brinquedos de madeira</p>
         </li>
         <li class="bento__item bento__item--areia" data-reveal>
-          <img src="assets/img/e-areia.jpg" alt="Tanque de areia no pátio com tubos sonoros coloridos" width="1100" height="825" loading="lazy">
+          <img src="/assets/img/e-areia.jpg" alt="Tanque de areia no pátio com tubos sonoros coloridos" width="1100" height="825" loading="lazy">
           <p><strong>Tanque de areia</strong>Com instrumentos de tubos para fazer som</p>
         </li>
         <li class="bento__item bento__item--cozinha" data-reveal>
-          <img src="assets/img/e-cozinha-ext.jpg" alt="Cozinha de brincar ao ar livre feita de madeira, com panelas e pratos de flores" width="1000" height="1333" loading="lazy">
+          <img src="/assets/img/e-cozinha-ext.jpg" alt="Cozinha de brincar ao ar livre feita de madeira, com panelas e pratos de flores" width="1000" height="1333" loading="lazy">
           <p><strong>Cozinha de brincar</strong>Panelas de verdade, ao ar livre</p>
         </li>
         <li class="bento__item bento__item--atelie" data-reveal>
-          <img src="assets/img/e-atelie.jpg" alt="Mesa de investigação com lupas, sementes e elementos naturais" width="1100" height="733" loading="lazy">
+          <img src="/assets/img/e-atelie.jpg" alt="Mesa de investigação com lupas, sementes e elementos naturais" width="1100" height="733" loading="lazy">
           <p><strong>Ateliê de investigação</strong>Lupas, sementes e coleções</p>
         </li>
         <li class="bento__item bento__item--canteiro" data-reveal>
-          <img src="assets/img/e-canteiro.jpg" alt="Crianças mexendo na terra de um canteiro no pátio" width="1100" height="825" loading="lazy">
+          <img src="/assets/img/e-canteiro.jpg" alt="Crianças mexendo na terra de um canteiro no pátio" width="1100" height="825" loading="lazy">
           <p><strong>Canteiros</strong>Terra para mexer e plantar</p>
         </li>
         <li class="bento__item bento__item--salao" data-reveal>
-          <img src="assets/img/e-salao.jpg" alt="Salão coberto cheio de famílias reunidas num encontro da escola" width="1024" height="768" loading="lazy">
+          <img src="/assets/img/e-salao.jpg" alt="Salão coberto cheio de famílias reunidas num encontro da escola" width="1024" height="768" loading="lazy">
           <p><strong>Salão coberto</strong>Encontros com as famílias</p>
         </li>
         <li class="bento__item bento__item--rampa" data-reveal>
-          <img src="assets/img/e-rampa.jpg" alt="Bebê subindo numa rampa de madeira no parque" width="900" height="1200" loading="lazy">
+          <img src="/assets/img/e-rampa.jpg" alt="Bebê subindo numa rampa de madeira no parque" width="900" height="1200" loading="lazy">
           <p><strong>Parque</strong>Rampas de madeira e escorregador</p>
         </li>
         <li class="bento__item bento__item--materiais" data-reveal>
-          <img src="assets/img/e-materiais.jpg" alt="Materiais naturais organizados sobre tecidos: cestos, madeira e coco" width="1024" height="768" loading="lazy">
+          <img src="/assets/img/e-materiais.jpg" alt="Materiais naturais organizados sobre tecidos: cestos, madeira e coco" width="1024" height="768" loading="lazy">
           <p><strong>Materiais naturais</strong>Madeira, palha, coco e sementes</p>
         </li>
       </ul>
@@ -189,19 +155,19 @@
       </div>
       <ul class="pillars__list" role="list">
         <li class="pillar" data-reveal>
-          <img src="assets/img/alimentacao.jpg" alt="Menino de touca mexendo uma massa de chocolate" width="900" height="1200" loading="lazy">
+          <img src="/assets/img/alimentacao.jpg" alt="Menino de touca mexendo uma massa de chocolate" width="900" height="1200" loading="lazy">
           <div><h3>Alimentação saudável</h3><p>Porque educar é também nutrir.</p></div>
         </li>
         <li class="pillar" data-reveal>
-          <img src="assets/img/telas.jpg" alt="Menina examinando uma pedra com uma lupa" width="900" height="1200" loading="lazy">
+          <img src="/assets/img/telas.jpg" alt="Menina examinando uma pedra com uma lupa" width="900" height="1200" loading="lazy">
           <div><h3>Zero telas</h3><p>Para que as crianças cresçam em presença, encontro e imaginação.</p></div>
         </li>
         <li class="pillar" data-reveal>
-          <img src="assets/img/natureza-l.jpg" alt="Duas crianças de costas observando um lago entre árvores" width="1280" height="960" loading="lazy">
+          <img src="/assets/img/natureza-l.jpg" alt="Duas crianças de costas observando um lago entre árvores" width="1280" height="960" loading="lazy">
           <div><h3>Escola da natureza e do brincar</h3><p>Onde cada árvore é mestra e cada estação é aprendizado.</p></div>
         </li>
         <li class="pillar" data-reveal>
-          <img src="assets/img/apostila.jpg" alt="Crianças pintando com pigmentos naturais sobre papel no chão" width="900" height="679" loading="lazy">
+          <img src="/assets/img/apostila.jpg" alt="Crianças pintando com pigmentos naturais sobre papel no chão" width="900" height="679" loading="lazy">
           <div><h3>Não ao apostilamento</h3><p>A infância precisa de liberdade para investigar, criar e poetizar o mundo.</p></div>
         </li>
       </ul>
@@ -238,32 +204,32 @@
 
       <ol class="grow" role="list">
         <li class="grow__item" id="t-sementinha" style="--h: 46%">
-          <div class="grow__photo"><img src="assets/img/sementinha.jpg" alt="Bebê engatinhando sobre um tapete de crochê com argolas de madeira" width="400" height="533" loading="lazy"></div>
+          <div class="grow__photo"><img src="/assets/img/sementinha.jpg" alt="Bebê engatinhando sobre um tapete de crochê com argolas de madeira" width="400" height="533" loading="lazy"></div>
           <h3>Sementinha</h3><p class="grow__age">4 meses a 1 ano</p>
           <p class="grow__desc">O primeiro chão: tapetes, cestos de tesouros e colo para explorar pelos sentidos.</p>
         </li>
         <li class="grow__item" id="t-brotinho" style="--h: 56%">
-          <div class="grow__photo"><img src="assets/img/brotinho.jpg" alt="Bebê subindo numa rampa de madeira" width="400" height="533" loading="lazy"></div>
+          <div class="grow__photo"><img src="/assets/img/brotinho.jpg" alt="Bebê subindo numa rampa de madeira" width="400" height="533" loading="lazy"></div>
           <h3>Brotinho</h3><p class="grow__age">1 a 2 anos</p>
           <p class="grow__desc">Engatinhar, subir e dar os primeiros passos pelo quintal.</p>
         </li>
         <li class="grow__item" id="t-tronquinho" style="--h: 66%">
-          <div class="grow__photo"><img src="assets/img/tronquinho.jpg" alt="Duas crianças brincando com rolhas e cestos de palha" width="400" height="533" loading="lazy"></div>
+          <div class="grow__photo"><img src="/assets/img/tronquinho.jpg" alt="Duas crianças brincando com rolhas e cestos de palha" width="400" height="533" loading="lazy"></div>
           <h3>Tronquinho</h3><p class="grow__age">2 a 3 anos</p>
           <p class="grow__desc">Elementos naturais, faz de conta e a alegria de brincar junto.</p>
         </li>
         <li class="grow__item" id="t-galhos" style="--h: 76%">
-          <div class="grow__photo"><img src="assets/img/galhos.jpg" alt="Menino observando borboletas numa caixa com uma lupa" width="400" height="533" loading="lazy"></div>
+          <div class="grow__photo"><img src="/assets/img/galhos.jpg" alt="Menino observando borboletas numa caixa com uma lupa" width="400" height="533" loading="lazy"></div>
           <h3>Galhos</h3><p class="grow__age">3 a 4 anos</p>
           <p class="grow__desc">Lupa, terra e água na mão: perguntas viram investigações.</p>
         </li>
         <li class="grow__item" id="t-flores" style="--h: 88%">
-          <div class="grow__photo"><img src="assets/img/flores.jpg" alt="Crianças pintando com tintas coloridas no pátio" width="400" height="525" loading="lazy"></div>
+          <div class="grow__photo"><img src="/assets/img/flores.jpg" alt="Crianças pintando com tintas coloridas no pátio" width="400" height="525" loading="lazy"></div>
           <h3>Flores</h3><p class="grow__age">4 a 5 anos</p>
           <p class="grow__desc">Arte, pigmentos naturais e histórias em muitas linguagens.</p>
         </li>
         <li class="grow__item" id="t-frutos" style="--h: 100%">
-          <div class="grow__photo"><img src="assets/img/frutos-l.jpg" alt="Menino desenhando borboletas observadas numa caixa de coleção" width="900" height="675" loading="lazy"></div>
+          <div class="grow__photo"><img src="/assets/img/frutos-l.jpg" alt="Menino desenhando borboletas observadas numa caixa de coleção" width="900" height="675" loading="lazy"></div>
           <h3>Frutos</h3><p class="grow__age">5 a 6 anos</p>
           <p class="grow__desc">Leitura e escrita com sentido, nascidas da investigação, sem apostilas.</p>
         </li>
@@ -298,17 +264,17 @@
         <p data-reveal>As crianças também cozinham: põem a mão na massa, misturam e provam. Comida de verdade, feita perto delas.</p>
       </div>
       <div class="kitchen__grid">
-        <img data-reveal src="assets/img/chef.jpg" alt="Bebê de chapéu de cozinheiro mexendo uma tigela" width="800" height="1067" loading="lazy">
-        <img data-reveal src="assets/img/paodequeijo.jpg" alt="Tigela de pães de queijo feitos na escola" width="800" height="1067" loading="lazy">
-        <img data-reveal src="assets/img/almoco.jpg" alt="Menina almoçando arroz e legumes" width="800" height="1067" loading="lazy">
-        <img data-reveal src="assets/img/espetinho.jpg" alt="Crianças de touca montando espetinhos de legumes" width="800" height="600" loading="lazy">
+        <img data-reveal src="/assets/img/chef.jpg" alt="Bebê de chapéu de cozinheiro mexendo uma tigela" width="800" height="1067" loading="lazy">
+        <img data-reveal src="/assets/img/paodequeijo.jpg" alt="Tigela de pães de queijo feitos na escola" width="800" height="1067" loading="lazy">
+        <img data-reveal src="/assets/img/almoco.jpg" alt="Menina almoçando arroz e legumes" width="800" height="1067" loading="lazy">
+        <img data-reveal src="/assets/img/espetinho.jpg" alt="Crianças de touca montando espetinhos de legumes" width="800" height="600" loading="lazy">
       </div>
     </section>
 
     <!-- Team -->
     <section class="team" id="equipe" aria-labelledby="equipe-titulo">
       <figure class="team__photo" data-reveal>
-        <img src="assets/img/equipe.jpg" alt="Professoras do Baobá estudando juntas numa formação" width="1000" height="750" loading="lazy">
+        <img src="/assets/img/equipe.jpg" alt="Professoras do Baobá estudando juntas numa formação" width="1000" height="750" loading="lazy">
       </figure>
       <div class="team__text">
         <h2 id="equipe-titulo" class="h2" data-reveal>Gente que cuida de perto</h2>
@@ -340,14 +306,30 @@
         </div>
       </div>
       <ul class="strip" id="strip" role="list" tabindex="0" aria-label="Fotos do dia a dia">
-        <li><img src="assets/img/barro.jpg" alt="Mãos de criança amassando argila azul numa bacia" width="800" height="800" loading="lazy"><p>Barro e tinta</p></li>
-        <li><img src="assets/img/milho.jpg" alt="Bebês sentados entre palhas e espigas de milho" width="800" height="1067" loading="lazy"><p>Festa do milho</p></li>
-        <li><img src="assets/img/fogueira.jpg" alt="Famílias e crianças em volta de uma pequena fogueira à noite" width="900" height="788" loading="lazy"><p>Noite com as famílias</p></li>
-        <li><img src="assets/img/bolhas.jpg" alt="Menino observando de perto uma bolha de sabão colorida" width="800" height="1067" loading="lazy"><p>Bolhas de sabão</p></li>
-        <li><img src="assets/img/tocos.jpg" alt="Menina empilhando tocos de madeira com dinossauros de brinquedo" width="800" height="1067" loading="lazy"><p>Torres de tocos</p></li>
-        <li><img src="assets/img/tunel.jpg" alt="Bebê sorrindo dentro de um túnel amarelo do escorregador" width="800" height="1067" loading="lazy"><p>O túnel amarelo</p></li>
-        <li><img src="assets/img/e-mesa.jpg" alt="Mesa de investigação com lupas, insetos e frutas" width="1000" height="1000" loading="lazy"><p>Investigar com lupa</p></li>
-        <li><img src="assets/img/e-tocos.jpg" alt="Mesa comprida coberta de rodelas de madeira no pátio" width="1100" height="825" loading="lazy"><p>Rodelas de madeira</p></li>
+        <li><img src="/assets/img/barro.jpg" alt="Mãos de criança amassando argila azul numa bacia" width="800" height="800" loading="lazy"><p>Barro e tinta</p></li>
+        <li><img src="/assets/img/milho.jpg" alt="Bebês sentados entre palhas e espigas de milho" width="800" height="1067" loading="lazy"><p>Festa do milho</p></li>
+        <li><img src="/assets/img/fogueira.jpg" alt="Famílias e crianças em volta de uma pequena fogueira à noite" width="900" height="788" loading="lazy"><p>Noite com as famílias</p></li>
+        <li><img src="/assets/img/bolhas.jpg" alt="Menino observando de perto uma bolha de sabão colorida" width="800" height="1067" loading="lazy"><p>Bolhas de sabão</p></li>
+        <li><img src="/assets/img/tocos.jpg" alt="Menina empilhando tocos de madeira com dinossauros de brinquedo" width="800" height="1067" loading="lazy"><p>Torres de tocos</p></li>
+        <li><img src="/assets/img/tunel.jpg" alt="Bebê sorrindo dentro de um túnel amarelo do escorregador" width="800" height="1067" loading="lazy"><p>O túnel amarelo</p></li>
+        <li><img src="/assets/img/e-mesa.jpg" alt="Mesa de investigação com lupas, insetos e frutas" width="1000" height="1000" loading="lazy"><p>Investigar com lupa</p></li>
+        <li><img src="/assets/img/e-tocos.jpg" alt="Mesa comprida coberta de rodelas de madeira no pátio" width="1100" height="825" loading="lazy"><p>Rodelas de madeira</p></li>
+      </ul>
+    </section>
+
+    <!-- Blog teaser: the latest answers for families -->
+    <section class="families" id="familias" aria-labelledby="familias-titulo">
+      <div class="families__head">
+        <div>
+          <h2 id="familias-titulo" class="h2" data-reveal>Dúvidas de pais, respostas do Baobá</h2>
+          <p data-reveal>Mordida, febre, adaptação, desfralde: textos curtos da nossa equipe sobre o dia a dia da primeira infância. Ficou com dúvida? Cada artigo tem um botão para falar com a escola.</p>
+        </div>
+        <a class="btn" href="/blog/" data-reveal>Ver todos os artigos</a>
+      </div>
+      <ul class="cards" role="list">
+        {%- for post in collections.posts | head(3) %}
+        {% include "card.njk" %}
+        {%- endfor %}
       </ul>
     </section>
 
@@ -434,36 +416,10 @@
     </section>
   </main>
 
-  <footer class="foot awning">
-    <div class="foot__top">
-      <a class="foot__plate" href="#topo" aria-label="Espaço Baobá, voltar ao início">
-        <img src="assets/img/logo.jpg" alt="Espaço Baobá" width="600" height="600" loading="lazy">
-      </a>
-      <p class="foot__line">Educação infantil com afeto, arte e natureza.</p>
-    </div>
-    <div class="foot__cols">
-      <nav class="foot__nav" aria-label="Rodapé">
-        <a href="#espacos">Espaços</a>
-        <a href="#proposta">Proposta</a>
-        <a href="#turmas">Turmas</a>
-        <a href="#horarios">Horários</a>
-        <a href="#cozinha">Cozinha</a>
-        <a href="#equipe">Equipe</a>
-        <a href="#duvidas">Perguntas</a>
-        <a href="#visita">Agendar visita</a>
-      </nav>
-      <div class="foot__contact">
-        <p>Rua José de Melo, 80, Vila Assunção<br>Santo André, SP, 09030-580</p>
-        <p><a href="tel:+5511916000518">(11) 91600-0518</a><br><a href="mailto:baobaei@hotmail.com">baobaei@hotmail.com</a><br><a href="https://www.instagram.com/espaco_baoba_edu/" target="_blank" rel="noopener">@espaco_baoba_edu</a></p>
-      </div>
-    </div>
-    <p class="foot__copy">© <span id="ano">2026</span> Espaço Baobá · Berçário e Educação Infantil</p>
-  </footer>
+{% include "footer.njk" %}
 
-  <a class="wa-float" data-wa="Olá! Vi o site do Espaço Baobá e gostaria de mais informações." href="https://wa.me/5511916000518" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
-  </a>
+{% include "wa-float.njk" %}
 
-  <script src="assets/script.js" defer></script>
+  <script src="/assets/script.js" defer></script>
 </body>
 </html>

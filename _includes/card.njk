@@ -1,0 +1,11 @@
+<li class="card" data-reveal data-cat="{{ post.data.category }}">
+          <a class="card__link" href="{{ post.url }}">
+            <div class="card__img">
+              {%- if post.data.cover %}<img src="{{ post.data.cover }}" alt="{{ post.data.cover_alt or '' }}" width="800" height="600" loading="lazy">{% endif %}
+            </div>
+            <p class="card__cat">{{ post.data.category }}</p>
+            <h3 class="card__title">{{ post.data.title }}</h3>
+            <p class="card__desc">{{ post.data.description }}</p>
+            <span class="card__more">Ler artigo</span>
+          </a>
+        </li>

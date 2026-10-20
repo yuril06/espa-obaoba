@@ -1,0 +1,15 @@
+{
+  "name": "espaco-baoba",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site do Espaço Baobá com blog editável pelo painel /admin",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve --port=8080",
+    "cms": "decap-server"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.7",
+    "decap-server": "^3.11.5"
+  }
+}
