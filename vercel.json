@@ -2,6 +2,10 @@
   "buildCommand": "npm run build",
   "outputDirectory": "_site",
   "rewrites": [
-    { "source": "/api/github/(.*)", "destination": "/api/github?path=$1" }
-  ]
+    {
+      "source": "/api/github/(.*)",
+      "destination": "/api/github?path=$1"
+    }
+  ],
+  "trailingSlash": true
 }
