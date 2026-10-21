@@ -1,12 +1,13 @@
 // Passes temporários do painel /admin. O passe é assinado no servidor e não contém
-// nenhuma chave do GitHub: só a data de validade.
+// nenhuma chave do GitHub: só a data de validade. Trocar a senha encerra todas as sessões;
+// trocar a chave do GitHub não.
 const crypto = require("crypto");
 
 const DAYS = 7;
 
 const key = () =>
   crypto.createHash("sha256")
-    .update(`baoba-session:${process.env.ADMIN_PASSWORD}:${process.env.GITHUB_TOKEN}`)
+    .update(`baoba-session:${process.env.ADMIN_PASSWORD}`)
     .digest();
 
 const sign = (payload) => crypto.createHmac("sha256", key()).update(payload).digest("base64url");

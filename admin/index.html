@@ -10,6 +10,22 @@
 </head>
 <body>
   <!-- Decap CMS: the school writes and publishes blog posts here. Settings in config.yml -->
+  <script>
+    // An expired pass would leave the editor with empty fields: send the person back to the password screen.
+    (function () {
+      var original = window.fetch;
+      window.fetch = function () {
+        return original.apply(this, arguments).then(function (res) {
+          if (res.status === 401 && String(res.url).indexOf('/api/github/') !== -1) {
+            localStorage.removeItem('decap-cms-user');
+            alert('Sua sessão expirou. Entre de novo com a senha.');
+            location.reload();
+          }
+          return res;
+        });
+      };
+    })();
+  </script>
   <script src="https://unpkg.com/decap-cms@3.17.1/dist/decap-cms.js"></script>
   <script>
     CMS.registerPreviewStyle('/assets/styles.css');
